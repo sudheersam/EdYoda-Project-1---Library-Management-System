@@ -1,0 +1,52 @@
+from user import Member
+from user import Librarian
+
+lib = Librarian("Ganesh", "Hyderabad", 25,"AJSK8549","EMP58964")
+print(lib)
+lib.addBook("Revolution","Chetan Bhagat","Fiction","12_05_2015")
+lib.addBookItem("Revolution", "123pk", "H1B1")
+lib.addBookItem("Revolution", "124pk", "H1B2")
+lib.addBook("Darkness at Noon","Arthur Koestler","Novel", "13_09_2002")
+lib.addBookItem("Darkness at Noon", "854hm", "C1B1")
+lib.addBookItem("Darkness at Noon", "685hm", "C1B2")
+lib.addBook("The Fault In Our Stars","John Green","Romance", "14_08_2012")
+lib.addBookItem("The Fault In Our Stars", "957jg", "R1B1")
+lib.addBookItem("The Fault In Our Stars", "985jg", "R1B2")
+lib.viewBooks()
+lib.removeBookItem("985jg")
+lib.viewBooks()
+lib.removeBook("The Fault In Our Stars")
+lib.viewBooks()
+
+member1 = Member("sam", "Hyderabad", 23, "ABCD4325", "STUD4361")
+member2 = Member("Sudheer", "Hyderabad", 23, "DCBA4320", "STUD8768")
+print(member2)
+member1.viewBooks()
+member1.searchByTitle("Darkness at Noon")
+member1.searchByTitle("Rich Dad Poor Dad")
+member1.searchByAuthor("Arthur Koestler")
+member1.searchByAuthor("Robert Kiyosaki")
+member1.searchByCategory("Fiction")
+member1.searchByCategory("Self Help")
+member1.searchByPublicationDate("2015")
+member1.searchByPublicationDate("2013")
+member1.reserveBook("REvolution")
+member2.reserveBook("Darkness at Noon")
+member1.viewBooks()
+
+lib.viewReservedBookItems()
+lib.viewIssuerInfo()
+
+member1.returnBook()
+member2.returnBook()
+member1.viewBooks()
+
+member2.reserveBook("Darkness at Noon")
+member2.extendDates()
+
+
+lib.addMember("Sunil", "Hyderabad", "23", "PQRS6789", "STUD6789")
+lib.viewMembers()
+lib.searchMember("Sam")
+lib.removeMember("Sudheer")
+member1.reserveBook("Darkness at Noon")
